@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            height: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        #canvas-one {
+            width: 50%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #canvas-one canvas {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #CCC;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-one">
+        <canvas id="one">
+                Sorry, your browser doesn't support the &lt;canvas&gt;                 
+        </canvas>
+    </div>
+    <script>
+        //矩形的画法
+        var canvas = document.getElementById('one');
+        if(canvas.getContext) {
+            //support
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = "rgb(200,0,0)";
+            ctx.fillRect (10,10,55,50);
+            var i = 0;
+            var stander = 0;
+            var limit = 8;
+            setInterval(function() {
+                if(stander >= limit) {
+                    --i;
+                    if(i <= 0) {
+                        stander = 0;
+                    }
+                    ctx.clearRect (30+i*5, 30+i*5, 55+i*2, 50+i*2);
+                }else{
+                    ctx.fillStyle = `rgba(0, 0, ${200-i*5}, 0.5)`;
+                    ctx.fillRect (30+i*5, 30+i*5, 55+i*2, 50+i*2);
+                    stander = ++i;
+                }
+            },100)
+            // ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+            // ctx.fillRect (30, 30, 55, 50);
+
+            ctx.fillRect(100,10,100,100);//画矩形
+            ctx.clearRect(120, 30, 60,60);//清除矩形
+            ctx.strokeRect(125,35, 50,50);//画矩形的边框线
+
+        }else{
+            console.log('sdf');
+            //unsupported
+        }
+    </script>
+</body>
+</html>

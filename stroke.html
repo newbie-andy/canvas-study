@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            height: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        #canvas-one {
+            width: 50%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #canvas-one canvas {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #CCC;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-one">
+        <canvas id="one">
+                Sorry, your browser doesn't support the &lt;canvas&gt;                 
+        </canvas>
+    </div>
+    <script>
+        //矩形的画法
+        var one = document.getElementById('one');
+        if(one.getContext) {
+            var cxt = one.getContext('2d');
+            var cxt1 = one.getContext('2d');
+            //画三角形，并填充
+            cxt.beginPath();
+            cxt.moveTo(50, 50);
+            cxt.lineTo(80,25);
+            cxt.lineTo(80,75);
+            cxt1.fillStyle="rgba(0, 0, 200, 0.5)";
+            cxt.fill();
+
+            //描边
+            cxt1.beginPath();
+            cxt1.moveTo(100, 50);
+            cxt1.lineTo(130,25);
+            cxt1.lineTo(130,75);
+            cxt1.stroke();
+
+            //描边+闭合
+            cxt1.beginPath();
+            cxt1.moveTo(150, 50);
+            cxt1.lineTo(180,25);
+            cxt1.lineTo(180,75);
+            cxt1.closePath();
+            cxt1.stroke();
+
+
+        }else{
+            console.log('sdf');
+            //unsupported
+        }
+    </script>
+</body>
+</html>

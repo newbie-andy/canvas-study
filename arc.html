@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            height: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        #canvas-one {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #canvas-one canvas {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #CCC;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-one">
+        <canvas id="one">
+                Sorry, your browser doesn't support the &lt;canvas&gt;                 
+        </canvas>
+    </div>
+    <script>
+        //圆形的画法
+        var one = document.getElementById('one');
+        if(one.getContext) {
+            var cxt = one.getContext('2d');
+            var cxt1 = one.getContext('2d');
+            for(i=0; i<4; i++){
+                for(j=0; j<3; j++) {
+                    cxt.beginPath();
+                    var xStart = 20 + j*30;
+                    var yStart = 20 + i*30;
+                    var radius = 12;
+                    var start = 0;
+                    var end = Math.PI + Math.PI * j/2;
+                    var anticlockwise = i%2==0 ?  false : true; 
+                    cxt.arc(xStart, yStart, radius, start, end,anticlockwise);
+
+                    if(i>1) {
+                        cxt.fill();
+                    }else{
+                        //cxt.closePath();
+                        cxt.stroke();
+                    }
+                }
+            }
+            cxt1.beginPath();
+            cxt1.moveTo(180,10);
+            cxt1.arcTo(150,50, 200,80, 30);
+
+            cxt1.fillStyle = '#00ff00';
+            cxt1.fillRect(180,10,5,5);
+            cxt1.fillStyle = '#ff0000';
+            cxt1.fillRect(150,50,5,5);
+            cxt1.fillStyle = '#0000ff';
+            cxt1.fillRect(200,80,5,5);
+
+            cxt1.moveTo(150,50);
+            cxt1.lineTo(200, 80);
+
+            cxt1.moveTo(180,10);
+            cxt1.lineTo(150,50);
+            cxt1.stroke();
+
+        }else{
+            console.log('unsupported');
+        }
+    </script>
+</body>
+</html>
