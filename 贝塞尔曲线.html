@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贝塞尔曲线</title>
+</head>
+<style>
+    #demo {
+        width: 800px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid #CCC;
+    }
+</style>
+<body>
+    <canvas id="demo"></canvas>
+    <script>
+        var demo = document.getElementById('demo');
+        if(demo.getContext) {
+            // //二次贝塞尔曲线
+            // var canvas = demo.getContext('2d');
+            // canvas.beginPath();
+            // canvas.moveTo(50, 50);
+            // canvas.quadraticCurveTo(100, 80, 200, 40);
+            // canvas.stroke();
+
+            // //描点
+            // canvas.fillStyle="#ff0000";
+            // canvas.fillRect(50, 50, 5,5);
+
+            // canvas.fillStyle="#00ff00";
+            // canvas.fillRect(100, 80, 5,5);
+
+            // canvas.fillStyle="#ff0000";
+            // canvas.fillRect(200, 40, 5,5);
+
+            // //画线
+            // canvas.beginPath();
+            // canvas.moveTo(50,50);
+            // canvas.lineTo(100,80);
+            // canvas.lineTo(200, 40);
+            // canvas.stroke();
+            
+
+
+
+            // //三次贝塞尔曲线
+            // var canvas1 = demo.getContext('2d');
+            // canvas1.beginPath();
+            // canvas1.moveTo(10, 100);
+            // canvas1.bezierCurveTo(50, 10, 200, 30, 250, 40);
+            // canvas1.stroke();
+
+            // canvas1.fillStyle="#ff0000";
+            // canvas1.fillRect(10, 100, 10, 10);
+            // canvas1.fillStyle="#ff0000";
+            // canvas1.fillRect( 250, 40, 10, 10);
+
+            // canvas1.fillStyle="#00ff00";
+            // canvas1.fillRect( 50, 10, 10, 10);
+
+            // canvas1.fillStyle="#00ff00";
+            // canvas1.fillRect( 200, 30, 10, 10);
+
+            // //画线
+            // canvas1.beginPath();
+            // canvas1.moveTo(10, 100);
+            // canvas1.lineTo(50, 10);
+            // canvas1.stroke();
+
+            // canvas1.beginPath();
+            // canvas1.moveTo(200, 30);
+            // canvas1.lineTo(250, 40);
+            // canvas1.stroke();
+
+            // //矩形的画法
+            // var canvas = demo.getContext('2d');
+            // canvas.rect(20,20,50,50);
+            // canvas.stroke();
+
+            //path2D对象存储路径进行画图，它可以将路径作为参数，用来之后根据相应的参数画图
+            // new Path2D();     // 空的Path对象
+            // new Path2D(path); // 克隆Path对象
+            // new Path2D(d);    // 从SVG建立Path对象
+            //当有新的路径需要添加进来，我们可以运用该对象的addPath(path[, transform])方法添加相应的路径
+
+
+        }else{
+            console.log("您的浏览器暂不支持canvas");
+        }
+    </script>
+</body>
+</html>

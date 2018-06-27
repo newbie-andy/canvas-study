@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>门店预约</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <style>
+    	body{
+    		background: #dce4f0;
+    	}
+        .order_title {
+            width: 100%;
+            height: 100px;
+            background: #2e78ff;
+        }
+        .seven {
+            font-size: 17px;
+            color: #fff;
+            text-align: center;
+            line-height: 25px;
+        }
+        .four {
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            line-height: 25px;
+        }
+        .com_list {
+            margin: 0 auto;
+            margin-top: -40px;
+            width: 92%;
+            height: 100px;
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .all_title {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            line-height: 35px;
+        }
+        .star_02 {
+            margin-right: 15px;
+            width: 26px;
+            height: 26px;
+        }
+        .star_img {
+            text-align: center;
+        }
+        .level_txt {
+            font-size: 12px;
+            color: #ffb400;
+            line-height: 30px;
+            text-align: center;
+        }
+        .evaluation_list {
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            width: 92%;
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .eval {
+            margin: 0 auto;
+            width: 90%;
+            height: auto;
+        }
+        .Store_eval {
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+        }
+        .Store_name {
+            float: left;
+            width: 20%;
+            font-size: 12px;
+            color: #333;
+        }
+        .heart_level {
+            float: left;
+            width: 65%;
+            text-align: center;
+        }
+        .comments_1,
+        .comments_2,
+        .comments_3 {
+            float: right;
+            width: 15%;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .heart_01,
+        .heart_02,
+        .heart_03 {
+            margin-left: 4px;
+            width: 25px;
+            height: 20px;
+            margin-top: -4px;
+            vertical-align: middle;
+        }
+        .parise_title {
+            margin: 0 auto;
+            margin-top: 6px;
+            width: 90%;
+            height: auto;
+            font-size: 12px;
+            color: #666;
+            line-height: 35px;
+            border-top: 1px solid #c4c4c4;
+        }
+        .parse_word {
+            margin: 0 auto;
+            width: 90%;
+            height: auto;
+            min-height: 30px;
+        }
+        .p_word {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            padding: 4px 12px;
+            border: 1px solid #bebebe;
+            height: 30px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #bebebe;
+            border-radius: 50px;
+        }
+        .n_word {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            padding: 4px 12px;
+            border: none;
+            height: 30px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            border: 1px solid #ffb400;;
+            border-radius: 50px;
+            background: #ffb400;
+        }
+        .advice {
+            margin: 0 auto;
+            width: 90%;
+            height: auto;
+        }
+        .textarea {
+            margin: 0px auto;
+            margin-bottom: 20px;
+            padding: 5px;
+            height: 120px;
+            background: #f0f0f0;
+        }
+        #textarea {
+            width: 100%;
+            height: 100%;
+            line-height: 25px;
+            font-size: 12px;
+            color: #666;
+            outline: none;
+            resize: none;
+        }
+        .clear {
+            clear: both;
+        }
+        .foot {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            background: #2e78ff;
+        }
+    </style>
+</head>
+<body>
+	<div class="order_title">
+        <p class="four">您的评价会让我们做的更好</p>
+    </div>
+    <div class="com_list">
+        <p class="all_title">整体服务</p>
+        <div class="star_img">
+            <img src="../../image/star_02.png" class="star_02" >
+            <img src="../../image/star_02.png" class="star_02" >
+            <img src="../../image/star_02.png" class="star_02" >
+            <img src="../../image/star_02.png" class="star_02" >
+            <img src="../../image/star_02.png" class="star_02" >
+        </div>
+        <p class="level_txt">请评价</p>
+    </div>
+    <div class="evaluation_list">
+        <div class="eval">
+            <div class="Store_eval">
+                <span class="Store_name">门店环境</span>
+                <div class="heart_level">
+                    <img src="../../image/heart_02.png" class="heart_01" >
+                    <img src="../../image/heart_02.png" class="heart_01" >
+                    <img src="../../image/heart_02.png" class="heart_01" >
+                    <img src="../../image/heart_02.png" class="heart_01" >
+                    <img src="../../image/heart_02.png" class="heart_01" >
+                </div>
+                <span class="comments_1">请评价</span>
+            </div>
+            <div class="Store_eval">
+                <span class="Store_name">柜员服务</span>
+                <div class="heart_level">
+                    <img src="../../image/heart_02.png" class="heart_02" >
+                    <img src="../../image/heart_02.png" class="heart_02" >
+                    <img src="../../image/heart_02.png" class="heart_02" >
+                    <img src="../../image/heart_02.png" class="heart_02" >
+                    <img src="../../image/heart_02.png" class="heart_02" >
+                </div>
+                <span class="comments_2">请评价</span>
+            </div>
+            <div class="Store_eval">
+                <span class="Store_name">办理时效</span>
+                <div class="heart_level">
+                    <img src="../../image/heart_02.png" class="heart_03" >
+                    <img src="../../image/heart_02.png" class="heart_03" >
+                    <img src="../../image/heart_02.png" class="heart_03" >
+                    <img src="../../image/heart_02.png" class="heart_03" >
+                    <img src="../../image/heart_02.png" class="heart_03" >
+                </div>
+                <span class="comments_3">请评价</span>
+            </div>
+        </div>
+        <div class="parise_title">夸奖一下呗</div>
+        <div class="parse_word">
+            <span class="p_word">门店环境好</span>
+            <span class="p_word">柜员服务态度好</span>
+            <span class="p_word">不用等待</span>
+            <span class="p_word">门店等待娱乐项目多</span>
+        </div>
+        <div class="clear"></div>
+        <div class="advice">
+            <div class="textarea">
+                <textarea placeholder="想对九洲说点啥？(内容严格保密，请放心填写，200字以内)" id="textarea" oninput="wordnum()"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="foot" onclick="submitEvaluation()">提交</div>
+    <!-- 整体服务 -->
+    <input type="hidden" value="" id="overallService">
+    <!-- 门店环境 -->
+    <input type="hidden" value="" id="store1">
+    <!-- 柜员服务 -->
+    <input type="hidden" value="" id="store2">
+    <!-- 办理时效 -->
+    <input type="hidden" value="" id="store3">
+    <!-- 夸奖一下呗 -->
+    <input type="hidden" value="" id="praiseIt">
+</body>
+<!-- <script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/sys_constant.js"></script>
+<script type="text/javascript" src="../../script/sys_util.js"></script>
+<script type="text/javascript" src="../../script/aui-dialog.js"></script> -->
+<script type="text/javascript">
+    var array = new Array();
+    function SelectWords(){
+        var word = document.querySelectorAll('.p_word');
+        for(var i=0;i<word.length;i++){
+            word[i].setAttribute('index', i);
+            word[i].onclick = function(){
+                let index = parseInt(this.getAttribute('index'));
+                console.log(index);
+                let pos = array.indexOf(index);
+                if(this.classList.contains('n_word')){
+                    pos >= 0 ? array.splice(pos, 1): '';
+                    console.log(array.length);
+                    this.classList.remove("n_word");
+                }else {
+                    pos >= 0 ? '': array.push(index);
+                    this.classList.add("n_word");
+                }
+                console.log(array);
+            }
+        }
+    }
+    SelectWords();
+</script>
+</html>
